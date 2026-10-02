@@ -1,0 +1,35 @@
+/* ==========================================================================
+   CONTACT — social / contact icon links
+   ========================================================================== */
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    color: #F5F2EA;
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(15, 15, 20, 0.35);
+    border: 1px solid rgba(245, 242, 234, 0.16);
+    transition: background-color 0.28s ease, border-color 0.28s ease,
+                box-shadow 0.28s ease, transform 0.28s ease, color 0.28s ease;
+}
+
+.social-icon:hover {
+    background: #8B1E1E;
+    border-color: rgba(255, 45, 45, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(255, 45, 45, 0.35);
+    color: #F5F2EA;
+}

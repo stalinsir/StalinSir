@@ -1,0 +1,49 @@
+/* ==========================================================================
+   RESPONSIVE — all media queries (load this file LAST)
+   ========================================================================== */
+
+/* ---------- Tablet landscape ---------- */
+@media (max-width: 1024px) {
+    .hero-intro { width: 28vw; }
+    .hero-location,
+    .hero-location .hero-role { font-size: clamp(11px, 1.1vw, 14px); }
+}
+
+/* ---------- Tablet portrait / Mobile ---------- */
+@media (max-width: 768px) {
+    section {
+        padding: 0 4%;
+    }
+
+    .glass-card {
+        padding: 2.5rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    p.desc {
+        font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero-intro     { top: 24%; left: 20px; width: 32vw; }
+    .hero-greeting  { font-size: clamp(26px, 3vw, 36px); }
+    .hero-side-copy { top: 24%; }
+    .hero-location  { right: 20px; width: min(40vw, 280px); }
+    .scroll-indicator span { font-size: clamp(10px, 1vw, 12px); }
+    /* About */
+    .tech-badge {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    /* Contact */
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+}

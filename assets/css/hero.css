@@ -1,0 +1,183 @@
+/* ==========================================================================
+   HERO — landing section (portrait + big PORTFOLIO text + corner labels)
+   ========================================================================== */
+
+.hero-new-v2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.hero-portrait {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    height: min(156vh, 1000px);
+    width: auto;
+    max-width: none;
+    transform: translateX(-50%);
+    object-fit: contain;
+    object-position: top center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--cream);
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Hero side labels */
+.hero-intro {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    z-index: 4;
+    width: min(27vw, 340px);
+    transform: translateY(-50%);
+}
+
+.hero-side-copy {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    color: var(--cream);
+    font-family: var(--font-display);
+    line-height: 1.1;
+    transform: translateY(-50%);
+}
+
+.hero-greeting {
+    color: #F5F2EA;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+    animation: hero-greeting-in 0.8s ease-out both;
+}
+
+@keyframes hero-greeting-in {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-role {
+    max-width: 100%;
+    margin: 0;
+    color: #F5F2EA;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+}
+
+.hero-location {
+    right: 6%;
+    width: clamp(240px, 28vw, 340px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    text-align: right;
+    color: #F5F2EA;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+    animation: hero-right-copy-in 0.8s ease-out both;
+}
+
+@keyframes hero-right-copy-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+/* "Scroll to Explore" indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2vh;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #F5F2EA;
+    text-align: center;
+    animation: scroll-indicator-in 0.8s ease-out both;
+}
+
+.scroll-indicator span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+}
+
+.scroll-indicator .scroll-arrow {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 15px;
+    animation: scroll-arrow-drift 2.4s ease-in-out infinite;
+}
+
+.scroll-indicator .scroll-arrow::before {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 1px;
+    height: 10px;
+    background: currentColor;
+    content: "";
+}
+
+.scroll-indicator .scroll-arrow::after {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+    content: "";
+}
+
+@keyframes scroll-indicator-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes scroll-arrow-drift {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(5px); }
+}

@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Dependencies / build output (if you add npm later)
+node_modules/
+dist/
+
+# Old files kept only for reference — remove this line if you want them in Git
+_archive/

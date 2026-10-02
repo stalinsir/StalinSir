@@ -1,0 +1,107 @@
+/* ==========================================================================
+   LAYOUT — fixed background canvas, overlay, sections, glass card
+   ========================================================================== */
+
+/* The scroll-driven background canvas */
+#scroll-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;               /* Fallback */
+}
+
+/* Darkens the background slightly so text pops */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sections are tall so scrolling drives the canvas animation */
+section {
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+/* Last empty section so the scroll animation can finish */
+.end-section {
+    min-height: 100vh;
+    justify-content: flex-end;
+    padding-bottom: 5vh;
+}
+
+.end-section p {
+    opacity: 0.5;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Glassmorphism card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 32px;
+    padding: 4rem 3rem;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#about .glass-card {
+    background: rgba(15, 15, 20, 0.72);
+}
+
+#contact .glass-card {
+    background: rgba(15, 15, 20, 0.72);
+}
+
+/* Minimal site footer */
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 72px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(245, 242, 234, 0.10);
+    color: rgba(245, 242, 234, 0.58);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        min-height: 88px;
+        padding: 1.25rem 4%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 0.45rem;
+    }
+}

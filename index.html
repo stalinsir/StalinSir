@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Stalin Kumar Sahoo, aspiring full-stack developer and Computer Science graduate.">
+    <meta name="theme-color" content="#000000">
+    <title>Stalin Sir</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons: Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Site styles (order matters: base → layout → sections → animations → responsive) -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <!-- Fixed background: scroll-driven image sequence -->
+    <canvas id="scroll-canvas" aria-hidden="true"></canvas>
+    <div class="overlay"></div>
+
+    <main class="content">
+
+        <!-- Section 1: Hero -->
+        <section id="hero" class="hero-new-v2">
+            <div class="hero-intro">
+                <div class="hero-greeting">HEY, I'M STALIN</div>
+            </div>
+            <div class="hero-side-copy hero-location">
+                <div>BASED IN INDIA</div>
+                <div class="hero-role">FULL-STACK DEVELOPER IN THE MAKING</div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to Explore</span>
+                <span class="scroll-arrow" aria-hidden="true"></span>
+            </div>
+        </section>
+
+        <!-- Section 2: About -->
+        <section id="about">
+            <div class="glass-card">
+                <h1 class="section-title">About Me</h1>
+                <p class="desc">
+                    I'm a Computer Science graduate passionate about software development, UI design, and modern web technologies. I build clean, interactive and user-friendly applications with performance and simplicity in mind.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">React</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Contact -->
+        <section id="contact">
+            <div class="glass-card">
+                <h1 class="section-title">Let's Connect</h1>
+                <p class="desc">
+                    Currently open to new opportunities and exciting projects. Let's build something amazing together.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/stalinsir" class="social-icon" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/stalinsir/" class="social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:stalinsir@icloud.com" class="social-icon" title="Email" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="tel:9078233449" class="social-icon" title="Phone" aria-label="Phone">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="assets/docs/resume.pdf" class="social-icon" target="_blank" rel="noopener noreferrer" title="Resume" aria-label="Resume">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empty space at the bottom so the scroll animation can finish -->
+        <section class="end-section">
+            <p>End of Journey</p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <span>© 2026 STALIN KUMAR SAHOO</span>
+        <span>DESIGNED &amp; BUILT WITH CODE</span>
+    </footer>
+
+    <!-- Scripts (order matters: modules first, main.js last) -->
+    <script src="assets/js/modules/scroll-canvas.js"></script>
+    <script src="assets/js/modules/reveal.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
